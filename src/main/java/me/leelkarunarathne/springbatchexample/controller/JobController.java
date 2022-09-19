@@ -14,12 +14,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
-import java.util.Collection;
 
 @RestController
 @RequestMapping("/jobs")
 public class JobController {
 
+    @Autowired
+    private JobLauncher jobLauncher;
     @Autowired
     private Job job;
 
